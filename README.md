@@ -1,14 +1,51 @@
-# Satellite-Debris Collision Prediction System
+# 🚀 Satellite‑Debris Collision Prediction System
 
-A 3D interactive visualization system that predicts satellite-debris collision risks using machine learning and Three.js.
+An immersive 3D visualization and ML-powered pipeline to simulate and predict satellite-debris collision risks. This project blends astrodynamics, real satellite data, and machine learning into one interactive experience — all visualized beautifully in the browser.
+
+---
 
 ## ✨ Features
 
-- **3D Earth Visualization** - Interactive Earth model with realistic textures and cloud layers
-- **Real-time Orbit Simulation** - Dynamic satellite and debris trajectory tracking
-- **ML-Powered Predictions** - FastAPI backend with trained collision prediction model
-- **Interactive Controls** - Orbit, zoom, and pan controls for exploration
-- **Real-time Risk Assessment** - Live collision risk calculation and visualization
+* **🛰 Real NORAD TLE Data** — Simulates satellite motion using real-world Two-Line Elements.
+* **🧭 Physics-first SGP4 Propagation** — Precise orbit mechanics via SGP4 orbital model.
+* **🧠 ML-Driven Risk Analysis** — Random Forest classifier predicts real-time collision threats.
+* **🌍 3D Earth Simulation** — Fully interactive globe, satellites, and debris orbiting with realism.
+* **🎮 Live Control** — Users can manipulate debris paths, and the model responds in real-time.
+
+---
+
+## 📚 Data & Orbital Mechanics
+
+* **Sources**: TLE data from [CelesTrak](https://celestrak.org).
+* **SGP4 Propagation**: Implemented using the `sgp4` Python library to get the accurate orbital motion values for prediction.
+* **Debris Simulation**: Injected based on user-defined parameters or random entries at LEO altitudes.
+* **Collision Metrics**: Based on relative position vectors, velocities, and proximity (<500 km threshold).
+
+---
+
+## 🧠 ML Model Workflow
+
+* **Training Dataset**: `collision_dataset_500km.csv`
+* **Model**: `RandomForestClassifier` from `scikit-learn`
+* **Features Used**:
+
+  * Satellite and debris position vectors (x, y, z)
+  * Relative distances
+  * Velocity deltas
+* **Output**: Binary prediction of collision risk
+
+> ✅ The ML model was trained in Google Colab and exported as `collision_pipeline.pkl` using joblib.
+
+---
+
+## ⚠️ Roadblocks Faced
+
+* 🔁 **CORS Errors**: Fixed via FastAPI's CORSMiddleware.
+* 🔍 **Tuning Orbit Physics**: SGP4 time drifts initially misaligned trajectories.
+* 🌐 **Frontend API Fetch Fails**: Had to align ports and local network origins.
+* 🧪 **Overfitting in ML**: Balanced the dataset and performed proper train/test splitting.
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -79,6 +116,7 @@ myearthproject/
 
 ## 🌐 Deployment
 
+in process😭
 
 
 ### Environment Variables:
@@ -114,4 +152,6 @@ This project is licensed under the Apache License 2.0.
 - [Three.js Documentation](https://threejs.org/docs/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [scikit-learn Documentation](https://scikit-learn.org/)
+- [SGP4 Theory - AIAA Paper](https://celestrak.org/publications/AIAA/2008-6770/)
+- [CelesTrak TLE Feeds](https://celestrak.org/NORAD/elements/) 
 
