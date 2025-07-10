@@ -23,24 +23,6 @@ build/
 .env.test.local
 .env.production.local
 
-# Large files (prevent accidentally adding large assets)
-*.exr
-*.hdr
-*.tiff
-*.tif
-*.raw
-*.bmp
-*.psd
-*.ai
-*.zip
-*.rar
-*.7z
-*.tar.gz
-*.dmg
-*.iso
-*.exe
-*.msi
-
 # IDE/Editor files
 .vscode/
 .idea/
