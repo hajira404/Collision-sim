@@ -35,7 +35,7 @@ An immersive 3D visualization and ML-powered pipeline to simulate and predict sa
   * Velocity deltas
 * **Output**: Binary prediction of collision risk
 
-> ✅ The ML model was trained in Google Colab and exported as `collision_pipeline.pkl` using joblib.
+The ML model was trained in Google Colab and exported as `collision_pipeline.pkl`.
 
 ---
 
