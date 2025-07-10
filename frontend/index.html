@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3D Earth Model with Trajectories</title>
+    <meta charset="utf-8" />
+    
+    <!-- Google Font for retro style -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.167.0",
+    "three/addons/": "https://esm.sh/three@0.167.0/examples/jsm/",
+    "three/": "https://esm.sh/three@^0.178.0/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="./index.js"></script>
+<script type="module" src="/index.tsx"></script>
+
+<!--  Control Panel for Collision Prediction -->
+<div id="control-panel">
+  <h2>Collision Prediction</h2>
+
+  <div class="panel-body">
+    <div class="button-section">
+      <button id="predictbtn"></button>
+      <div class="button-label">Predict</div>
+      <button id="resetbtn"></button>
+      <div class="button-label">Reset</div>
+    </div>
+
+    <div class="status-box" id="prediction-result">
+      Status: Pending...
+    </div>
+  </div>
+</div>
+</html>

@@ -1,0 +1,138 @@
+/**
+ * Global styles for the 3D Earth visualization.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+canvas {
+  display: block; /* Removes bottom margin for inline elements */
+}
+
+/* Simple info text styling */
+.info {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display:block;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    pointer-events: none; /* Make text non-interactive */
+}
+
+/* Control panel styles */
+/* Panel container */
+#control-panel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(20, 20, 20, 0.2);
+  padding: 24px 28px;
+  border-radius: 16px;
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  z-index: 100;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: fit-content;
+}
+
+/* Title */
+#control-panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #00ffff;
+  text-shadow: 0 0 2px #00ffffaa;
+  margin-bottom: 20px;
+}
+
+/* Layout for buttons + status */
+.panel-body {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Buttons on the left */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Each circular button */
+#control-panel button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.4), 0 4px 12px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#control-panel button:hover {
+  transform: scale(1.05);
+}
+
+/* Button colors */
+#predictbtn {
+  background: radial-gradient(circle at 30% 30%, #a53131, #cc0000);
+}
+
+#resetbtn {
+  background: radial-gradient(circle at 30% 30%, #114811, #2b9e2b);
+}
+
+/* Button text label */
+.button-label {
+  font-size: 8px;
+  color: #ffffffcc;
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+
+/* Status window */
+.status-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 18px 22px; /* more padding */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ff4444;
+  text-shadow: 0 0 2px #ff4444aa;
+  font-size: 15px;
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.7; /* add more vertical spacing */
+  letter-spacing: 1.2px; /* optional: more retro breathing room */
+  max-width: 280px;
+  word-wrap: break-word;
+}
+
+
+

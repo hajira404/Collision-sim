@@ -1,0 +1,6 @@
+{
+  "name": "3D Earth with Trajectories",
+  "description": "An interactive 3D model of the Earth with animated orbital trajectories, built with three.js. No API keys required.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
