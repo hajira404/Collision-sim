@@ -1,21 +1,21 @@
-# 🚀 Satellite‑Debris Collision Prediction System
+#  Satellite‑Debris Collision Prediction System
 
 
 An immersive 3D visualization and ML-powered pipeline to simulate and predict satellite-debris collision risks. This project blends astrodynamics, real satellite data, and machine learning into one interactive experience — all visualized beautifully in the browser.
 
 ---
 
-## ✨ Features
+##  Features
 
-* **🛰 Real NORAD TLE Data** — Simulates satellite motion using real-world Two-Line Elements.
-* **🧭 Physics-first SGP4 Propagation** — Precise orbit mechanics via SGP4 orbital model.
-* **🧠 ML-Driven Risk Analysis** — Random Forest classifier predicts real-time collision threats.
-* **🌍 3D Earth Simulation** — Fully interactive globe, satellites, and debris orbiting with realism.
-* **🎮 Live Control** — Users can manipulate debris paths, and the model responds in real-time.
+* ** Real NORAD TLE Data** — Simulates satellite motion using real-world Two-Line Elements.
+* ** Physics-first SGP4 Propagation** — Precise orbit mechanics via SGP4 orbital model.
+* ** ML-Driven Risk Analysis** — Random Forest classifier predicts real-time collision threats.
+* ** 3D Earth Simulation** — Fully interactive globe, satellites, and debris orbiting with realism.
+* ** Live Control** — Users can manipulate debris paths, and the model responds in real-time.
 
 ---
 
-## 📚 Data & Orbital Mechanics
+##  Data & Orbital Mechanics
 
 * **Sources**: TLE data from [CelesTrak](https://celestrak.org).
 * **SGP4 Propagation**: Implemented using the `sgp4` Python library to get the accurate orbital motion values for prediction.
@@ -24,7 +24,7 @@ An immersive 3D visualization and ML-powered pipeline to simulate and predict sa
 
 ---
 
-## 🧠 ML Model Workflow
+##  ML Model Workflow
 
 * **Training Dataset**: `collision_dataset_500km.csv`
 * **Model**: `RandomForestClassifier` from `scikit-learn`
@@ -39,16 +39,16 @@ The ML model was trained in Google Colab and exported as `collision_pipeline.pkl
 
 ---
 
-## ⚠️ Roadblocks Faced
+##  Roadblocks Faced
 
-* 🔁 **CORS Errors**: Fixed via FastAPI's CORSMiddleware.
-* 🔍 **Tuning Orbit Physics**: SGP4 time drifts initially misaligned trajectories.
-* 🌐 **Frontend API Fetch Fails**: Had to align ports and local network origins.
-* 🧪 **Overfitting in ML**: Balanced the dataset and performed proper train/test splitting.
+*  **CORS Errors**: Fixed via FastAPI's CORSMiddleware.
+*  **Tuning Orbit Physics**: SGP4 time drifts initially misaligned trajectories.
+*  **Frontend API Fetch Fails**: Had to align ports and local network origins.
+*  **Overfitting in ML**: Balanced the dataset and performed proper train/test splitting.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
 - **Three.js** - 3D graphics and visualization
@@ -61,7 +61,7 @@ The ML model was trained in Google Colab and exported as `collision_pipeline.pkl
 - **Pandas** - Data processing
 - **Uvicorn** - ASGI server
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 myearthproject/
@@ -79,7 +79,7 @@ myearthproject/
     └── collision_dataset_500km.csv # Training data
 ```
 
-## 🚀 Local Development
+##  Local Development
 
 ### Backend Setup
 1. Navigate to the MLmodel directory:
@@ -115,7 +115,7 @@ myearthproject/
    ```
    Frontend will start at `http://localhost:3000`
 
-## 🌐 Deployment
+##  Deployment
 
 in process😭
 
@@ -123,32 +123,32 @@ in process😭
 ### Environment Variables:
 - `VITE_API_URL` - Backend API URL for frontend
 
-## 🎮 Usage
+##  Usage
 
 1. **View the 3D Earth** - Use mouse to orbit around the Earth
 2. **Watch Simulations** - Observe satellite and debris trajectories
 3. **Predict Collisions** - Click "Predict" to get ML-based risk assessment
 4. **Reset Simulation** - Use "Reset" to restart the visualization
 
-## 📊 ML Model
+##  ML Model
 
 The collision prediction model uses:
 - Relative position coordinates (x, y, z)
 - Distance between objects
 - Trained on collision scenarios with 500km threshold
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
 
-## 📄 License
+##  License
 
 This project is licensed under the Apache License 2.0.
 
-## 🔗 Links
+##  Links
 
 - [Three.js Documentation](https://threejs.org/docs/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
