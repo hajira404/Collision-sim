@@ -1,5 +1,5 @@
 #  Satellite‑Debris Collision Prediction System
-
+<video src="simulation3.mp4" controls width="100%"></video>
 An immersive 3D visualization and ML-powered pipeline to simulate and predict satellite-debris collision risks. This project blends astrodynamics, real satellite data, and machine learning into one interactive experience — all visualized beautifully in the browser.
 
 ---
